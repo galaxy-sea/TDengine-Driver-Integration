@@ -1,3 +1,6 @@
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+
 plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "2.1.20"
@@ -5,7 +8,9 @@ plugins {
 }
 
 group = "plus.wcj.jetbrains.plugins"
-version = "1.0-SNAPSHOT"
+version = run {
+    LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy.M.d.1HHmmss"))
+}
 
 repositories {
     mavenCentral()
