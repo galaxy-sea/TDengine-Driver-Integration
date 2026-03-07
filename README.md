@@ -17,4 +17,8 @@
 https://plugins.jetbrains.com/plugin/30538-tdengine-driver-integration
 
 
+## 已知问题
+- JetBrains 2025.2.4 添加后无法点击，使用完成重启法重启idea、datagrip （可能是我用开发版造成的吧）
+- JetBrains 2024.3 冻屏无法解决，直接升级JetBrains版本吧 （JetBrains用了虚拟线程）
 
+> 代码也不是很多但是不知道什么原因 JetBrains database模块开发总是会有一些问题。
