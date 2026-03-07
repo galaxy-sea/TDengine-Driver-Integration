@@ -1,0 +1,50 @@
+<!-- Plugin Configuration File: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN, cannot be changed between the plugin versions. -->
+    <id>plus.wcj.jetbrains.plugins.tdengine-driver-integration</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
+    <name>TDengine Driver Integration</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor url="https://github.com/galaxy-sea" email="weichangjin1996@gmail.com">ChangJin Wei (魏昌进)</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
+    <description><![CDATA[
+        <p>TDengine Driver Integration adds first-class TDengine data source setup to JetBrains database tools.</p>
+
+        <p>It provides a ready-to-use TDengine driver template for DataGrip and IntelliJ IDEA Ultimate 2024.3+, with built-in JDBC artifact download and connection validation.</p>
+
+        <ul>
+            <li>TDengine data source entry in the <b>Data Sources and Drivers</b> dialog</li>
+            <li>Preconfigured WebSocket JDBC URL template</li>
+            <li>Built-in JDBC artifact list for stable driver versions</li>
+            <li>Connection validation for driver class, URL, host, port, and database</li>
+            <li>Custom metadata wrapper for TDengine table introspection</li>
+        </ul>
+
+        <p>The plugin is intended for TDengine users who want a simpler setup experience inside JetBrains database IDEs.</p>
+    ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.database</depends>
+
+    <!-- Extensions defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <database.driversConfig config="databaseDrivers/tdengine-drivers.xml"/>
+        <database.artifactsConfig config="databaseDrivers/tdengine-artifacts.xml"/>
+        <database.configValidator implementation="plus.wcj.jetbrains.plugins.tdengine.TdengineConfigValidator"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="com.intellij.database">
+        <dbms id="TDENGINE" instance="plus.wcj.jetbrains.plugins.tdengine.TdengineDbms.TDENGINE"/>
+        <modelFacade dbms="TDENGINE" implementationClass="plus.wcj.jetbrains.plugins.tdengine.TdengineModelFacade"/>
+        <jdbcMetadataWrapper dbms="TDENGINE" implementationClass="plus.wcj.jetbrains.plugins.tdengine.TdengineMetadataWrapperFactory"/>
+        <extensionFallback dbms="TDENGINE" fallbackDbms="UNKNOWN"/>
+    </extensions>
+</idea-plugin>
