@@ -12,7 +12,9 @@
 [支持版本查看](https://docs.taosdata.com/reference/connector/#%E7%89%88%E6%9C%AC%E6%94%AF%E6%8C%81)
 ``用最新的就对了``，没有空测试所有版本的兼容性，毕竟要测试 TDengine、TDengine JDBCDriver、JetBrains全家桶 三者的兼容性是一个玄学。
 
-## 安装教程
+## 插件安装地址
+
+https://plugins.jetbrains.com/plugin/30538-tdengine-driver-integration
 
 
 
