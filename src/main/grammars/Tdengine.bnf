@@ -1,0 +1,1088 @@
+{
+  parserClass="plus.wcj.jetbrains.plugins.tdengine.sql.grammar.TdengineGrammarParser"
+  parserUtilClass="com.intellij.lang.parser.GeneratedParserUtilBase"
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+  psiClassPrefix="Tdengine"
+  psiImplClassSuffix="Impl"
+  psiPackage="plus.wcj.jetbrains.plugins.tdengine.sql.grammar.psi"
+  psiImplPackage="plus.wcj.jetbrains.plugins.tdengine.sql.grammar.psi.impl"
+  elementTypeHolderClass="plus.wcj.jetbrains.plugins.tdengine.sql.grammar.psi.TdengineTypes"
+  elementTypeClass="plus.wcj.jetbrains.plugins.tdengine.sql.grammar.psi.TdengineElementType"
+  tokenTypeClass="plus.wcj.jetbrains.plugins.tdengine.sql.grammar.psi.TdengineTokenType"
+  mixin(".*Statement")="plus.wcj.jetbrains.plugins.tdengine.sql.TdengineSqlStatementMixin"
+  tokens = [
+    ABORT='ABORT'
+    ACCOUNT='ACCOUNT'
+    ACCOUNTS='ACCOUNTS'
+    ADD='ADD'
+    AES_DECRYPT='AES_DECRYPT'
+    AES_ENCRYPT='AES_ENCRYPT'
+    AFTER='AFTER'
+    AGGREGATE='AGGREGATE'
+    ALIAS='ALIAS'
+    ALIVE='ALIVE'
+    ALL='ALL'
+    ALLOW_DATETIME='ALLOW_DATETIME'
+    ALLOW_TOKEN_NUM='ALLOW_TOKEN_NUM'
+    ALTER='ALTER'
+    ANALYZE='ANALYZE'
+    AND='AND'
+    ANODE='ANODE'
+    ANODES='ANODES'
+    ANOMALY_WINDOW='ANOMALY_WINDOW'
+    ANTI='ANTI'
+    APPS='APPS'
+    ARBGROUPS='ARBGROUPS'
+    ARROW='ARROW'
+    AS='AS'
+    ASC='ASC'
+    ASOF='ASOF'
+    ASYNC='ASYNC'
+    AT_ONCE='AT_ONCE'
+    ATTACH='ATTACH'
+    AUTO='AUTO'
+    ASSIGN='ASSIGN'
+    ALGR_NAME='ALGR_NAME'
+    ALGR_TYPE='ALGR_TYPE'
+    BALANCE='BALANCE'
+    BEFORE='BEFORE'
+    BEGIN='BEGIN'
+    BETWEEN='BETWEEN'
+    BIGINT='BIGINT'
+    BIN='BIN'
+    BINARY='BINARY'
+    BITAND='BITAND'
+    BITNOT='BITNOT'
+    BITOR='BITOR'
+    BLOB='BLOB'
+    BLOCKS='BLOCKS'
+    BNODE='BNODE'
+    BNODES='BNODES'
+    BOOL='BOOL'
+    BOTH='BOTH'
+    BUFFER='BUFFER'
+    BUFSIZE='BUFSIZE'
+    BWLIMIT='BWLIMIT'
+    BY='BY'
+    CACHE='CACHE'
+    CACHEMODEL='CACHEMODEL'
+    CACHESIZE='CACHESIZE'
+    CALC_NOTIFY_ONLY='CALC_NOTIFY_ONLY'
+    CALL_PER_SESSION='CALL_PER_SESSION'
+    CASE='CASE'
+    CAST='CAST'
+    CHANGE='CHANGE'
+    CHANGEPASS='CHANGEPASS'
+    CHILD='CHILD'
+    CLIENT_VERSION='CLIENT_VERSION'
+    CLUSTER='CLUSTER'
+    COLON='COLON'
+    COLS='COLS'
+    COLUMN='COLUMN'
+    COMMA='COMMA'
+    COMMENT='COMMENT'
+    COMP='COMP'
+    COMPACT='COMPACT'
+    COMPACTS='COMPACTS'
+    COMPACT_INTERVAL='COMPACT_INTERVAL'
+    COMPACT_TIME_OFFSET='COMPACT_TIME_OFFSET'
+    COMPACT_TIME_RANGE='COMPACT_TIME_RANGE'
+    COMPOSITE='COMPOSITE'
+    COMPRESS='COMPRESS'
+    CONCAT='CONCAT'
+    CONFLICT='CONFLICT'
+    CONNECT_IDLE_TIME='CONNECT_IDLE_TIME'
+    CONNECT_TIME='CONNECT_TIME'
+    CONNECTION='CONNECTION'
+    CONNECTIONS='CONNECTIONS'
+    CONNS='CONNS'
+    CONSUMER='CONSUMER'
+    CONSUMERS='CONSUMERS'
+    CONTAINS='CONTAINS'
+    CONTINUOUS_WINDOW_CLOSE='CONTINUOUS_WINDOW_CLOSE'
+    COPY='COPY'
+    COUNT='COUNT'
+    COUNT_WINDOW='COUNT_WINDOW'
+    CREATE='CREATE'
+    CREATEDB='CREATEDB'
+    CURRENT_USER='CURRENT_USER'
+    SCAN='SCAN'
+    SCANS='SCANS'
+    DATABASE='DATABASE'
+    DATABASES='DATABASES'
+    DBS='DBS'
+    DB_KEY='DB_KEY'
+    DECIMAL='DECIMAL'
+    DEFAULT='DEFAULT'
+    DEFERRED='DEFERRED'
+    DELETE='DELETE'
+    DELETE_MARK='DELETE_MARK'
+    DELETE_OUTPUT_TABLE='DELETE_OUTPUT_TABLE'
+    DELETE_RECALC='DELETE_RECALC'
+    DELIMITERS='DELIMITERS'
+    DESC='DESC'
+    DESCRIBE='DESCRIBE'
+    DETACH='DETACH'
+    DISK_INFO='DISK_INFO'
+    DISTINCT='DISTINCT'
+    DISTRIBUTED='DISTRIBUTED'
+    DIVIDE='DIVIDE'
+    DNODE='DNODE'
+    DNODES='DNODES'
+    DOT='DOT'
+    DOUBLE='DOUBLE'
+    DROP='DROP'
+    DURATION='DURATION'
+    EACH='EACH'
+    ELSE='ELSE'
+    ENCODE='ENCODE'
+    ENABLE='ENABLE'
+    ENCRYPT_ALGORITHM='ENCRYPT_ALGORITHM'
+    ENCRYPT_ALGORITHMS='ENCRYPT_ALGORITHMS'
+    ENCRYPT_ALGR='ENCRYPT_ALGR'
+    ENCRYPT_KEY='ENCRYPT_KEY'
+    ENCRYPT_STATUS='ENCRYPT_STATUS'
+    ENCRYPTIONS='ENCRYPTIONS'
+    END='END'
+    EQ='EQ'
+    EVENT_TYPE='EVENT_TYPE'
+    EVENT_WINDOW='EVENT_WINDOW'
+    EVERY='EVERY'
+    EXCEPT='EXCEPT'
+    EXISTS='EXISTS'
+    EXPIRED='EXPIRED'
+    EXPIRED_TIME='EXPIRED_TIME'
+    EXPLAIN='EXPLAIN'
+    EXTRA_INFO='EXTRA_INFO'
+    FAIL='FAIL'
+    FAILED_LOGIN_ATTEMPTS='FAILED_LOGIN_ATTEMPTS'
+    FHIGH='FHIGH'
+    FILE='FILE'
+    FILL='FILL'
+    FILL_HISTORY='FILL_HISTORY'
+    FILL_HISTORY_FIRST='FILL_HISTORY_FIRST'
+    FIRST='FIRST'
+    FLOAT='FLOAT'
+    FLOW='FLOW'
+    FLUSH='FLUSH'
+    FOR='FOR'
+    FORCE='FORCE'
+    FORCE_OUTPUT='FORCE_OUTPUT'
+    FORCE_WINDOW_CLOSE='FORCE_WINDOW_CLOSE'
+    FROM='FROM'
+    FROM_BASE64='FROM_BASE64'
+    FROWTS='FROWTS'
+    FULL='FULL'
+    FUNCTION='FUNCTION'
+    FUNCTIONS='FUNCTIONS'
+    GE='GE'
+    GEOMETRY='GEOMETRY'
+    GLOB='GLOB'
+    GRANT='GRANT'
+    GRANTS='GRANTS'
+    GROUP='GROUP'
+    GT='GT'
+    HAVING='HAVING'
+    HEX='HEX'
+    HOST='HOST'
+    ID='ID'
+    IF='IF'
+    IGNORE='IGNORE'
+    IGNORE_DISORDER='IGNORE_DISORDER'
+    IGNORE_NODATA_TRIGGER='IGNORE_NODATA_TRIGGER'
+    ILLEGAL='ILLEGAL'
+    IMMEDIATE='IMMEDIATE'
+    IMPORT='IMPORT'
+    IN='IN'
+    INACTIVE_ACCOUNT_TIME='INACTIVE_ACCOUNT_TIME'
+    INDEX='INDEX'
+    INDEXES='INDEXES'
+    INITIALLY='INITIALLY'
+    INNER='INNER'
+    INSERT='INSERT'
+    INSTANCES='INSTANCES'
+    INSTEAD='INSTEAD'
+    INT='INT'
+    INTEGER='INTEGER'
+    INTERSECT='INTERSECT'
+    INTERVAL='INTERVAL'
+    INTO='INTO'
+    IPTOKEN='IPTOKEN'
+    IROWTS='IROWTS'
+    IROWTS_ORIGIN='IROWTS_ORIGIN'
+    IS='IS'
+    IS_IMPORT='IS_IMPORT'
+    ISFILLED='ISFILLED'
+    ISNULL='ISNULL'
+    IS_AUDIT='IS_AUDIT'
+    JLIMIT='JLIMIT'
+    JOIN='JOIN'
+    JSON='JSON'
+    KEEP='KEEP'
+    KEEP_TIME_OFFSET='KEEP_TIME_OFFSET'
+    KEY='KEY'
+    KILL='KILL'
+    LANGUAGE='LANGUAGE'
+    LAST='LAST'
+    LAST_ROW='LAST_ROW'
+    LAST_VALUE='LAST_VALUE'
+    LE='LE'
+    LEADER='LEADER'
+    LEADING='LEADING'
+    LEFT='LEFT'
+    LEVEL='LEVEL'
+    LICENCES='LICENCES'
+    LIKE='LIKE'
+    LIMIT='LIMIT'
+    LINEAR='LINEAR'
+    LOCK='LOCK'
+    LOCAL='LOCAL'
+    LOGS='LOGS'
+    LOW_LATENCY_CALC='LOW_LATENCY_CALC'
+    LP='LP'
+    LSHIFT='LSHIFT'
+    LT='LT'
+    MACHINES='MACHINES'
+    MATCH='MATCH'
+    MAX_DELAY='MAX_DELAY'
+    MAXROWS='MAXROWS'
+    MEDIUMBLOB='MEDIUMBLOB'
+    MERGE='MERGE'
+    META='META'
+    META_ONLY='META_ONLY'
+    MD5='MD5'
+    MINROWS='MINROWS'
+    MINUS='MINUS'
+    MNODE='MNODE'
+    MNODES='MNODES'
+    MODIFY='MODIFY'
+    MODULES='MODULES'
+    MOUNT='MOUNT'
+    MOUNTS='MOUNTS'
+    NEAR='NEAR'
+    NCHAR='NCHAR'
+    NE='NE'
+    NEXT='NEXT'
+    NMATCH='NMATCH'
+    NONE='NONE'
+    NORMAL='NORMAL'
+    NOT='NOT'
+    NOT_ALLOW_DATETIME='NOT_ALLOW_DATETIME'
+    NOT_ALLOW_HOST='NOT_ALLOW_HOST'
+    NOTIFY='NOTIFY'
+    NOTIFY_HISTORY='NOTIFY_HISTORY'
+    NOTIFY_OPTIONS='NOTIFY_OPTIONS'
+    NOTNULL='NOTNULL'
+    NOW='NOW'
+    NULL='NULL'
+    NULL_F='NULL_F'
+    NULLS='NULLS'
+    OF='OF'
+    OFFSET='OFFSET'
+    ON='ON'
+    ONLY='ONLY'
+    ON_FAILURE='ON_FAILURE'
+    ON_FAILURE_PAUSE='ON_FAILURE_PAUSE'
+    OPTIONS='OPTIONS'
+    OR='OR'
+    ORDER='ORDER'
+    OUTER='OUTER'
+    OUTPUT_SUBTABLE='OUTPUT_SUBTABLE'
+    OUTPUTTYPE='OUTPUTTYPE'
+    OSSL_ALGR_NAME='OSSL_ALGR_NAME'
+    PAGES='PAGES'
+    PAGESIZE='PAGESIZE'
+    PARTITION='PARTITION'
+    PASS='PASS'
+    PASSWORD_LIFE_TIME='PASSWORD_LIFE_TIME'
+    PASSWORD_REUSE_TIME='PASSWORD_REUSE_TIME'
+    PASSWORD_REUSE_MAX='PASSWORD_REUSE_MAX'
+    PASSWORD_LOCK_TIME='PASSWORD_LOCK_TIME'
+    PASSWORD_GRACE_TIME='PASSWORD_GRACE_TIME'
+    PAUSE='PAUSE'
+    PERIOD='PERIOD'
+    PI='PI'
+    PLUS='PLUS'
+    PORT='PORT'
+    POSITION='POSITION'
+    PPS='PPS'
+    PRE_FILTER='PRE_FILTER'
+    PRECISION='PRECISION'
+    PREV='PREV'
+    PRIMARY='PRIMARY'
+    PRIVILEGE='PRIVILEGE'
+    PRIVILEGES='PRIVILEGES'
+    PROVIDER='PROVIDER'
+    QDURATION='QDURATION'
+    QEND='QEND'
+    QNODE='QNODE'
+    QNODES='QNODES'
+    QSTART='QSTART'
+    QTAGS='QTAGS'
+    QTIME='QTIME'
+    QUERIES='QUERIES'
+    QUERY='QUERY'
+    QUESTION='QUESTION'
+    RAISE='RAISE'
+    RAND='RAND'
+    RANGE='RANGE'
+    RATIO='RATIO'
+    READ='READ'
+    RECALCULATE='RECALCULATE'
+    RECURSIVE='RECURSIVE'
+    REGEXP='REGEXP'
+    REDISTRIBUTE='REDISTRIBUTE'
+    RELOAD='RELOAD'
+    REM='REM'
+    RENAME='RENAME'
+    REPLACE='REPLACE'
+    REPLICA='REPLICA'
+    REPLICAS='REPLICAS'
+    RESET='RESET'
+    RESTORE='RESTORE'
+    RESTRICT='RESTRICT'
+    RESUME='RESUME'
+    RETENTION='RETENTION'
+    RETENTIONS='RETENTIONS'
+    REVOKE='REVOKE'
+    RIGHT='RIGHT'
+    ROLE='ROLE'
+    ROLES='ROLES'
+    ROLLUP='ROLLUP'
+    ROW='ROW'
+    ROWTS='ROWTS'
+    RP='RP'
+    RSHIFT='RSHIFT'
+    RSMA='RSMA'
+    RSMAS='RSMAS'
+    S3MIGRATE='S3MIGRATE'
+    SCHEMALESS='SCHEMALESS'
+    SCORES='SCORES'
+    SELECT='SELECT'
+    SEMI='SEMI'
+    SERVER_STATUS='SERVER_STATUS'
+    SERVER_VERSION='SERVER_VERSION'
+    SESSION='SESSION'
+    SESSION_PER_USER='SESSION_PER_USER'
+    SHA='SHA'
+    SHA1='SHA1'
+    SHA2='SHA2'
+    SET='SET'
+    SHOW='SHOW'
+    SINGLE_STABLE='SINGLE_STABLE'
+    SLASH='SLASH'
+    SLIDING='SLIDING'
+    SLIMIT='SLIMIT'
+    SMA='SMA'
+    SMALLINT='SMALLINT'
+    SM4_DECRYPT='SM4_DECRYPT'
+    SM4_ENCRYPT='SM4_ENCRYPT'
+    SMIGRATE='SMIGRATE'
+    SNODE='SNODE'
+    SNODES='SNODES'
+    SOFFSET='SOFFSET'
+    SPLIT='SPLIT'
+    SS_CHUNKPAGES='SS_CHUNKPAGES'
+    SS_COMPACT='SS_COMPACT'
+    SS_KEEPLOCAL='SS_KEEPLOCAL'
+    SSMIGRATE='SSMIGRATE'
+    SSMIGRATES='SSMIGRATES'
+    STABLE='STABLE'
+    STABLES='STABLES'
+    STAR='STAR'
+    START='START'
+    STATE='STATE'
+    STATE_WINDOW='STATE_WINDOW'
+    STATEMENT='STATEMENT'
+    STOP='STOP'
+    STORAGE='STORAGE'
+    STREAM='STREAM'
+    STREAMS='STREAMS'
+    STRICT='STRICT'
+    STRING='STRING'
+    STT_TRIGGER='STT_TRIGGER'
+    SUBSCRIBE='SUBSCRIBE'
+    SUBSCRIPTIONS='SUBSCRIPTIONS'
+    SUBSTR='SUBSTR'
+    SUBSTRING='SUBSTRING'
+    SUBTABLE='SUBTABLE'
+    SVR_KEY='SVR_KEY'
+    SYSINFO='SYSINFO'
+    SYSTEM='SYSTEM'
+    TABLE='TABLE'
+    TABLE_PREFIX='TABLE_PREFIX'
+    TABLE_SUFFIX='TABLE_SUFFIX'
+    TABLES='TABLES'
+    TAG='TAG'
+    TAGS='TAGS'
+    TBNAME='TBNAME'
+    THEN='THEN'
+    TIMES='TIMES'
+    TIMESTAMP='TIMESTAMP'
+    TIMEZONE='TIMEZONE'
+    TINYINT='TINYINT'
+    TO='TO'
+    TO_BASE64='TO_BASE64'
+    TODAY='TODAY'
+    TOKEN='TOKEN'
+    TOKENS='TOKENS'
+    TOPIC='TOPIC'
+    TOPICS='TOPICS'
+    TOTP_SECRET='TOTP_SECRET'
+    TRAILING='TRAILING'
+    TRANSACTION='TRANSACTION'
+    TRANSACTIONS='TRANSACTIONS'
+    TRIGGER='TRIGGER'
+    TRIM='TRIM'
+    TRUE='TRUE'
+    TRUE_FOR='TRUE_FOR'
+    FALSE='FALSE'
+    TSDB_PAGESIZE='TSDB_PAGESIZE'
+    TSERIES='TSERIES'
+    TSMA='TSMA'
+    TSMAS='TSMAS'
+    TTL='TTL'
+    UNION='UNION'
+    UNSAFE='UNSAFE'
+    UNLOCK='UNLOCK'
+    UNSIGNED='UNSIGNED'
+    UNTREATED='UNTREATED'
+    UPDATE='UPDATE'
+    USE='USE'
+    USER='USER'
+    USERS='USERS'
+    USING='USING'
+    VALUE='VALUE'
+    VALUE_F='VALUE_F'
+    VALUES='VALUES'
+    VARBINARY='VARBINARY'
+    VARCHAR='VARCHAR'
+    VARIABLE='VARIABLE'
+    VTABLE='VTABLE'
+    VTABLES='VTABLES'
+    VARIABLES='VARIABLES'
+    VERBOSE='VERBOSE'
+    VGROUP='VGROUP'
+    VGROUPS='VGROUPS'
+    VIEW='VIEW'
+    VIEWS='VIEWS'
+    VIRTUAL='VIRTUAL'
+    VNODE='VNODE'
+    VNODE_PER_CALL='VNODE_PER_CALL'
+    VNODES='VNODES'
+    WAL='WAL'
+    WAL_FSYNC_PERIOD='WAL_FSYNC_PERIOD'
+    WAL_LEVEL='WAL_LEVEL'
+    WAL_RETENTION_PERIOD='WAL_RETENTION_PERIOD'
+    WAL_RETENTION_SIZE='WAL_RETENTION_SIZE'
+    WAL_ROLL_PERIOD='WAL_ROLL_PERIOD'
+    WAL_SEGMENT_SIZE='WAL_SEGMENT_SIZE'
+    WATERMARK='WATERMARK'
+    WDURATION='WDURATION'
+    WEND='WEND'
+    WHEN='WHEN'
+    WHERE='WHERE'
+    WINDOW='WINDOW'
+    WINDOW_CLOSE='WINDOW_CLOSE'
+    WINDOW_OFFSET='WINDOW_OFFSET'
+    WINDOW_OPEN='WINDOW_OPEN'
+    WITH='WITH'
+    WRITE='WRITE'
+    WSTART='WSTART'
+    _C0='_C0'
+    _IROWTS='_IROWTS'
+    _QDURATION='_QDURATION'
+    _QEND='_QEND'
+    _QSTART='_QSTART'
+    _ROWTS='_ROWTS'
+    _WDURATION='_WDURATION'
+    _WEND='_WEND'
+    _WSTART='_WSTART'
+    BLOCK_HINT='hint'
+    IDENTIFIER='identifier'
+    NUMBER_LITERAL='number'
+    ZERO_LITERAL='0'
+    ONE_LITERAL='1'
+    TWO_LITERAL='2'
+    STRING_LITERAL='string'
+    STRING_LITERAL_NONE=\"'none'\"
+    STRING_LITERAL_LAST_ROW=\"'last_row'\"
+    STRING_LITERAL_LAST_VALUE=\"'last_value'\"
+    STRING_LITERAL_BOTH=\"'both'\"
+    STRING_LITERAL_MS=\"'ms'\"
+    STRING_LITERAL_US=\"'us'\"
+    STRING_LITERAL_NS=\"'ns'\"
+    STRING_LITERAL_SIMPLE8B=\"'simple8b'\"
+    STRING_LITERAL_BIT_PACKING=\"'bit-packing'\"
+    STRING_LITERAL_DELTA_I=\"'delta-i'\"
+    STRING_LITERAL_DELTA_D=\"'delta-d'\"
+    STRING_LITERAL_DISABLED=\"'disabled'\"
+    STRING_LITERAL_BSS=\"'bss'\"
+    STRING_LITERAL_LZ4=\"'lz4'\"
+    STRING_LITERAL_ZLIB=\"'zlib'\"
+    STRING_LITERAL_ZSTD=\"'zstd'\"
+    STRING_LITERAL_TSZ=\"'tsz'\"
+    STRING_LITERAL_XZ=\"'xz'\"
+    STRING_LITERAL_HIGH=\"'high'\"
+    STRING_LITERAL_MEDIUM=\"'medium'\"
+    STRING_LITERAL_LOW=\"'low'\"
+    STRING_LITERAL_H=\"'h'\"
+    STRING_LITERAL_M=\"'m'\"
+    STRING_LITERAL_L=\"'l'\"
+    ASTERISK='*'
+    COMMA_SIGN=','
+    EQ_SIGN='='
+    GT_SIGN='>'
+    LT_SIGN='<'
+    GE_SIGN='>='
+    LE_SIGN='<='
+    NEQ_BANG='!='
+    NEQ_ANGLE='<>'
+    LPAREN='('
+    RPAREN=')'
+    SEMICOLON=';'
+    DOT_SIGN='.'
+    COLON_SIGN=':'
+    PLUS_SIGN='+'
+    MINUS_SIGN='-'
+    SLASH_SIGN='/'
+    QUESTION_SIGN='?'
+    EXPORT_TO='>>'
+  ]
+}
+
+tdengineFile ::= (statement SEMICOLON? | SEMICOLON)*
+
+private statement ::= createDatabaseStatement
+                    | alterDatabaseStatement
+                    | alterStableStatement
+                    | alterTableStatement
+                    | alterVtableStatement
+                    | balanceVgroupLeaderStatement
+                    | createTableStatement
+                    | createStableStatement
+                    | createVtableStatement
+                    | deleteStatement
+                    | describeStatement
+                    | dropDatabaseStatement
+                    | dropStableStatement
+                    | dropTableStatement
+                    | dropVtableStatement
+                    | flushDatabaseStatement
+                    | insertStatement
+                    | redistributeVgroupStatement
+                    | selectStatement
+                    | trimDatabaseStatement
+                    | useStatement
+                    | showStatement
+
+createDatabaseStatement ::= CREATE DATABASE (IF NOT EXISTS)? nameToken databaseOption*
+alterDatabaseStatement ::= ALTER DATABASE nameToken alterDatabaseOption*
+alterStableStatement ::= ALTER STABLE qualifiedName alterStableClause
+alterTableStatement ::= ALTER TABLE qualifiedName alterTableClause
+alterVtableStatement ::= ALTER VTABLE qualifiedName alterVtableClause
+balanceVgroupLeaderStatement ::= BALANCE VGROUP LEADER
+ifNotExistsClause ::= IF NOT EXISTS
+ifExistsClause ::= IF EXISTS
+databaseOption ::= VGROUPS databaseOptionValue
+                 | PRECISION precisionValue
+                 | REPLICA databaseOptionValue
+                 | BUFFER databaseOptionValue
+                 | PAGES databaseOptionValue
+                 | PAGESIZE databaseOptionValue
+                 | CACHEMODEL cacheModelValue
+                 | CACHESIZE databaseOptionValue
+                 | COMP compValue
+                 | DURATION databaseOptionValue
+                 | MAXROWS databaseOptionValue
+                 | MINROWS databaseOptionValue
+                 | KEEP databaseOptionValue
+                 | KEEP_TIME_OFFSET databaseOptionValue
+                 | STT_TRIGGER databaseOptionValue
+                 | SINGLE_STABLE singleStableValue
+                 | TABLE_PREFIX databaseOptionValue
+                 | TABLE_SUFFIX databaseOptionValue
+                 | DNODES databaseOptionValue
+                 | TSDB_PAGESIZE databaseOptionValue
+                 | WAL_LEVEL walLevelValue
+                 | WAL_FSYNC_PERIOD databaseOptionValue
+                 | WAL_RETENTION_PERIOD databaseOptionValue
+                 | WAL_RETENTION_SIZE databaseOptionValue
+                 | COMPACT_INTERVAL databaseOptionValue
+                 | COMPACT_TIME_RANGE databaseOptionValue
+                 | COMPACT_TIME_OFFSET databaseOptionValue
+                 | SS_KEEPLOCAL databaseOptionValue
+                 | SS_CHUNKPAGES databaseOptionValue
+                 | SS_COMPACT databaseOptionValue
+alterDatabaseOption ::= CACHEMODEL cacheModelValue
+                      | CACHESIZE databaseOptionValue
+                      | BUFFER databaseOptionValue
+                      | PAGES databaseOptionValue
+                      | REPLICA databaseOptionValue
+                      | STT_TRIGGER databaseOptionValue
+                      | WAL_LEVEL databaseOptionValue
+                      | WAL_FSYNC_PERIOD databaseOptionValue
+                      | KEEP databaseOptionValue
+                      | WAL_RETENTION_PERIOD databaseOptionValue
+                      | WAL_RETENTION_SIZE databaseOptionValue
+                      | MINROWS databaseOptionValue
+                      | COMPACT_INTERVAL databaseOptionValue
+                      | COMPACT_TIME_RANGE databaseOptionValue
+                      | COMPACT_TIME_OFFSET databaseOptionValue
+alterTableClause ::= alterTableOption+
+                   | ADD COLUMN nameToken columnDefinition
+                   | DROP COLUMN nameToken
+                   | MODIFY COLUMN nameToken columnDefinition
+                   | RENAME COLUMN nameToken nameToken
+                   | setTagClause
+alterTableOption ::= TTL databaseOptionValue
+                   | COMMENT STRING_LITERAL
+setTagClause ::= SET TAG tagAssignment (COMMA_SIGN tagAssignment)*
+tagAssignment ::= nameToken EQ_SIGN valueExpression
+alterStableClause ::= alterStableOption+
+                    | ADD COLUMN nameToken columnDefinition
+                    | DROP COLUMN nameToken
+                    | MODIFY COLUMN nameToken columnDefinition
+                    | ADD TAG nameToken typeName
+                    | DROP TAG nameToken
+                    | MODIFY TAG nameToken typeName
+                    | RENAME TAG nameToken nameToken
+alterStableOption ::= COMMENT STRING_LITERAL
+                    | KEEP databaseOptionValue
+alterVtableClause ::= ADD COLUMN nameToken typeName vtableFromClause?
+                    | DROP COLUMN nameToken
+                    | ALTER COLUMN nameToken SET alterVtableSetValue
+                    | MODIFY COLUMN nameToken columnDefinition
+                    | RENAME COLUMN nameToken nameToken
+                    | setTagClause
+alterVtableSetValue ::= sourceColumnReference | NULL
+precisionValue ::= STRING_LITERAL_MS | STRING_LITERAL_US | STRING_LITERAL_NS
+cacheModelValue ::= STRING_LITERAL_NONE
+                  | STRING_LITERAL_LAST_ROW
+                  | STRING_LITERAL_LAST_VALUE
+                  | STRING_LITERAL_BOTH
+compValue ::= ZERO_LITERAL | ONE_LITERAL | TWO_LITERAL
+singleStableValue ::= ZERO_LITERAL | ONE_LITERAL
+walLevelValue ::= ONE_LITERAL | TWO_LITERAL
+virtualValue ::= ZERO_LITERAL | ONE_LITERAL
+databaseOptionValue ::= nameToken | numericLiteral | STRING_LITERAL
+numericLiteral ::= NUMBER_LITERAL | ZERO_LITERAL | ONE_LITERAL | TWO_LITERAL
+
+createTableStatement ::= CREATE TABLE (createTableDefinition | createSubtableClause+ | createTableFromFileClause)
+createTableDefinition ::= ifNotExistsClause? qualifiedName LPAREN createDefinition (COMMA_SIGN createDefinition)* RPAREN tagsDefinitionClause? createTableOption*
+createSubtableClause ::= ifNotExistsClause? qualifiedName USING qualifiedName subtableTagNameClause? subtableTagsValueClause
+createTableFromFileClause ::= ifNotExistsClause? USING qualifiedName LPAREN fieldNameList RPAREN FILE filePath
+createStableStatement ::= CREATE STABLE ifNotExistsClause? qualifiedName LPAREN createDefinition (COMMA_SIGN createDefinition)* RPAREN tagsDefinitionClause createStableOption*
+createVtableStatement ::= CREATE VTABLE (createVtableColumnStatement | createVtableUsingStatement)
+deleteStatement ::= DELETE FROM qualifiedName whereClause?
+createVtableColumnStatement ::= ifNotExistsClause? qualifiedName LPAREN timestampColumnDefinition (COMMA_SIGN vtableCreateDefinition)* RPAREN
+createVtableUsingStatement ::= ifNotExistsClause? qualifiedName LPAREN vtableProjectionDefinition (COMMA_SIGN vtableProjectionDefinition)* RPAREN USING qualifiedName subtableTagNameClause? subtableTagsValueClause
+describeStatement ::= DESCRIBE qualifiedName
+dropDatabaseStatement ::= DROP DATABASE (IF EXISTS)? nameToken
+dropStableStatement ::= DROP STABLE ifExistsClause? qualifiedName
+dropTableStatement ::= DROP TABLE dropTableTarget (COMMA_SIGN dropTableTarget)*
+dropVtableStatement ::= DROP VTABLE ifExistsClause? qualifiedName
+dropTableTarget ::= ifExistsClause? qualifiedName
+flushDatabaseStatement ::= FLUSH DATABASE nameToken
+redistributeVgroupStatement ::= REDISTRIBUTE VGROUP identifierOrNumber dnodeAssignment+
+dnodeAssignment ::= DNODE identifierOrNumber
+trimDatabaseStatement ::= TRIM DATABASE nameToken trimDatabaseTail?
+trimDatabaseTail ::= WAL
+tagsDefinitionClause ::= TAGS LPAREN createDefinition (COMMA_SIGN createDefinition)* RPAREN
+subtableTagNameClause ::= LPAREN fieldNameList RPAREN
+subtableTagsValueClause ::= TAGS LPAREN tagValue (COMMA_SIGN tagValue)* RPAREN
+fieldNameList ::= nameToken (COMMA_SIGN nameToken)*
+filePath ::= stringLiteralValue | nameToken
+commonTableOption ::= COMMENT STRING_LITERAL
+                    | SMA LPAREN fieldNameList RPAREN
+createTableOption ::= commonTableOption
+                    | TTL databaseOptionValue
+createStableOption ::= commonTableOption
+                     | KEEP databaseOptionValue
+                     | VIRTUAL virtualValue
+createDefinition ::= nameToken columnDefinition
+vtableCreateDefinition ::= nameToken vtableColumnDefinition
+vtableProjectionDefinition ::= projectionSourceClause
+                            | nameToken FROM projectionSourceClause
+columnDefinition ::= typeName compositeKeyClause? encodeClause? compressClause? levelClause?
+timestampColumnDefinition ::= nameToken TIMESTAMP
+vtableColumnDefinition ::= typeName vtableFromClause?
+vtableFromClause ::= FROM sourceColumnReference
+sourceColumnReference ::= nameToken DOT_SIGN nameToken (DOT_SIGN nameToken)?
+projectionSourceClause ::= sourceColumnReference
+typeName ::= timestampTypeName
+           | integerTypeName
+           | floatingTypeName
+           | boolTypeName
+           | sizedTypeName
+           | jsonTypeName
+           | decimalTypeName
+           | blobTypeName
+timestampTypeName ::= TIMESTAMP
+integerTypeName ::= INT unsignedClause?
+                  | BIGINT unsignedClause?
+                  | SMALLINT unsignedClause?
+                  | TINYINT unsignedClause?
+floatingTypeName ::= FLOAT | DOUBLE
+boolTypeName ::= BOOL
+sizedTypeName ::= BINARY typeLengthClause
+                | NCHAR typeLengthClause
+                | VARCHAR typeLengthClause
+                | GEOMETRY typeLengthClause
+                | VARBINARY typeLengthClause
+jsonTypeName ::= JSON
+decimalTypeName ::= DECIMAL LPAREN numericLiteral (COMMA_SIGN numericLiteral)? RPAREN
+blobTypeName ::= BLOB
+unsignedClause ::= UNSIGNED
+typeLengthClause ::= LPAREN numericLiteral RPAREN
+compositeKeyClause ::= COMPOSITE KEY
+encodeClause ::= ENCODE encodeTypeValue
+compressClause ::= COMPRESS compressTypeValue
+levelClause ::= LEVEL compressionLevelValue
+encodeTypeValue ::= STRING_LITERAL_SIMPLE8B
+                  | STRING_LITERAL_BIT_PACKING
+                  | STRING_LITERAL_DELTA_I
+                  | STRING_LITERAL_DELTA_D
+                  | STRING_LITERAL_DISABLED
+                  | STRING_LITERAL_BSS
+compressTypeValue ::= STRING_LITERAL_LZ4
+                    | STRING_LITERAL_ZLIB
+                    | STRING_LITERAL_ZSTD
+                    | STRING_LITERAL_TSZ
+                    | STRING_LITERAL_XZ
+                    | STRING_LITERAL_DISABLED
+compressionLevelValue ::= STRING_LITERAL_HIGH
+                        | STRING_LITERAL_MEDIUM
+                        | STRING_LITERAL_LOW
+                        | STRING_LITERAL_H
+                        | STRING_LITERAL_M
+                        | STRING_LITERAL_L
+
+insertStatement ::= INSERT INTO insertTarget+
+insertTarget ::= qualifiedName insertUsingClause? fieldNameClause? insertSource
+insertUsingClause ::= USING qualifiedName subtableTagNameClause? subtableTagsValueClause
+fieldNameClause ::= LPAREN fieldNameList RPAREN
+insertSource ::= valuesClause | fileInsertClause | insertSubquery
+valuesClause ::= VALUES rowValueClause+
+rowValueClause ::= LPAREN valueExpression (COMMA_SIGN valueExpression)* RPAREN
+fileInsertClause ::= FILE filePath
+insertSubquery ::= selectQuery
+selectStatement ::= selectQuery
+selectQuery ::= selectQueryTerm unionClause*
+selectQueryTerm ::= selectBodyQuery
+unionClause ::= UNION ALL? selectQueryTerm
+selectBodyQuery ::= SELECT hintClause? distinctClause? selectTagsClause? selectList fromClause? whereClause? partitionByClause? interpClause? windowClause? groupByClause? orderByClause? slimitClause? limitClause? exportFileClause?
+hintClause ::= BLOCK_HINT+
+distinctClause ::= DISTINCT
+selectTagsClause ::= TAGS
+selectList ::= selectExpr (COMMA_SIGN selectExpr)*
+selectExpr ::= ASTERISK
+             | starSelectExpr
+             | valueExpression selectAliasClause?
+starSelectExpr ::= nameToken DOT_SIGN ASTERISK
+                 | qualifiedName DOT_SIGN ASTERISK
+selectAliasClause ::= AS? aliasName
+aliasName ::= nameToken | stringLiteralValue
+fromClause ::= FROM tableReference fromClauseTail*
+fromClauseTail ::= COMMA_SIGN tableReference
+                 | joinClause
+tableReference ::= tableExpr tableAliasClause?
+tableExpr ::= qualifiedName
+           | LPAREN selectQuery RPAREN
+tableAliasClause ::= AS aliasName
+                   | aliasName &tableAliasFollow
+tableAliasFollow ::= COMMA_SIGN
+                   | joinClauseStart
+                   | ON
+                   | WINDOW_OFFSET
+                   | JLIMIT
+                   | WHERE
+                   | PARTITION
+                   | RANGE
+                   | SESSION
+                   | STATE_WINDOW
+                   | INTERVAL
+                   | EVENT_WINDOW
+                   | COUNT_WINDOW
+                   | GROUP
+                   | ORDER
+                   | SLIMIT
+                   | LIMIT
+                   | EXPORT_TO
+                   | RPAREN
+                   | UNION
+                   | SEMICOLON
+                   | <<eof>>
+joinClauseStart ::= joinTypePrefix? JOIN
+joinClause ::= joinTypePrefix? JOIN tableReference joinOnClause? joinWindowOffsetClause? joinLimitClause?
+joinTypePrefix ::= (INNER | LEFT | RIGHT | FULL)? (OUTER | SEMI | ANTI | ASOF | WINDOW)?
+joinOnClause ::= ON valueExpression
+joinWindowOffsetClause ::= WINDOW_OFFSET LPAREN valueExpression COMMA_SIGN valueExpression RPAREN
+joinLimitClause ::= JLIMIT numericLiteral
+whereClause ::= WHERE valueExpression
+partitionByClause ::= PARTITION BY partitionByExpr (COMMA_SIGN partitionByExpr)*
+partitionByExpr ::= valueExpression | numericLiteral | nameToken
+interpClause ::= RANGE LPAREN valueExpression (COMMA_SIGN valueExpression)* RPAREN EVERY LPAREN valueExpression RPAREN fillClause?
+windowClause ::= SESSION LPAREN valueExpression (COMMA_SIGN valueExpression)* RPAREN
+               | STATE_WINDOW LPAREN valueExpression (COMMA_SIGN valueExpression)* RPAREN trueForClause?
+               | INTERVAL LPAREN valueExpression (COMMA_SIGN valueExpression)? RPAREN slidingClause? fillClause?
+               | EVENT_WINDOW START WITH valueExpression END WITH valueExpression trueForClause?
+               | COUNT_WINDOW LPAREN valueExpression (COMMA_SIGN valueExpression)* RPAREN
+groupByClause ::= GROUP BY groupByExpr (COMMA_SIGN groupByExpr)* havingClause?
+groupByExpr ::= valueExpression | numericLiteral | nameToken
+havingClause ::= HAVING valueExpression
+orderByClause ::= ORDER BY orderExpr (COMMA_SIGN orderExpr)*
+orderExpr ::= (valueExpression | numericLiteral | nameToken) sortDirection? nullsClause?
+sortDirection ::= DESC | ASC
+nullsClause ::= NULLS (FIRST | LAST)
+slidingClause ::= SLIDING LPAREN valueExpression RPAREN
+fillClause ::= FILL LPAREN fillArgument (COMMA_SIGN fillArgument)* RPAREN
+fillArgument ::= valueExpression
+               | fillKeyword
+fillKeyword ::= NONE
+              | VALUE
+              | PREV
+              | NEXT
+              | NEAR
+              | NULL_F
+              | LINEAR
+trueForClause ::= TRUE_FOR LPAREN trueForExpr RPAREN
+trueForExpr ::= valueExpression AND COUNT valueExpression
+              | valueExpression OR COUNT valueExpression
+              | COUNT valueExpression
+              | valueExpression
+slimitClause ::= SLIMIT numericLiteral (SOFFSET numericLiteral)?
+limitClause ::= LIMIT numericLiteral (OFFSET numericLiteral)?
+exportFileClause ::= EXPORT_TO filePath
+useStatement ::= USE nameToken
+
+showStatement ::= showAliveStatement
+                | showAppsStatement
+                | showClusterStatement
+                | showConnectionsStatement
+                | showConsumersStatement
+                | showCreateDatabaseStatement
+                | showCreateStableStatement
+                | showCreateTableStatement
+                | showCreateVtableStatement
+                | showDatabasesStatement
+                | showDnodesStatement
+                | showFunctionsStatement
+                | showLicencesStatement
+                | showGrantsStatement
+                | showIndexesStatement
+                | showLocalVariablesStatement
+                | showMnodesStatement
+                | showQnodesStatement
+                | showQueriesStatement
+                | showScoresStatement
+                | showStablesStatement
+                | showStreamsStatement
+                | showSubscriptionsStatement
+                | showTablesStatement
+                | showTableDistributedStatement
+                | showTableTagsStatement
+                | showTagsStatement
+                | showTopicsStatement
+                | showTransactionsStatement
+                | showTransactionStatement
+                | showUsersStatement
+                | showDnodeVariablesStatement
+                | showVgroupsStatement
+                | showVtablesStatement
+                | showVnodesStatement
+
+showAliveStatement ::= SHOW aliveTarget
+showAppsStatement ::= SHOW APPS
+showClusterStatement ::= SHOW CLUSTER clusterTail?
+clusterTail ::= ALIVE
+              | MACHINES
+              | VARIABLES likeClause?
+showConnectionsStatement ::= SHOW CONNECTIONS
+showConsumersStatement ::= SHOW CONSUMERS
+
+showCreateDatabaseStatement ::= SHOW CREATE DATABASE nameToken
+showCreateStableStatement ::= SHOW CREATE STABLE qualifiedName
+showCreateTableStatement ::= SHOW CREATE TABLE qualifiedName
+showCreateVtableStatement ::= SHOW CREATE VTABLE qualifiedName
+
+showDatabasesStatement ::= SHOW databaseScope? DATABASES
+databaseScope ::= USER | SYSTEM
+
+showDnodesStatement ::= SHOW DNODES
+showFunctionsStatement ::= SHOW FUNCTIONS
+showLicencesStatement ::= SHOW LICENCES
+showGrantsStatement ::= SHOW GRANTS grantsTail?
+grantsTail ::= FULL
+showIndexesStatement ::= SHOW INDEXES FROM qualifiedName
+showLocalVariablesStatement ::= SHOW LOCAL VARIABLES likeClause?
+showMnodesStatement ::= SHOW MNODES
+showQnodesStatement ::= SHOW QNODES
+showQueriesStatement ::= SHOW QUERIES
+showScoresStatement ::= SHOW SCORES
+showStablesStatement ::= SHOW stablesTarget likeClause?
+showStreamsStatement ::= SHOW streamsTarget
+showSubscriptionsStatement ::= SHOW SUBSCRIPTIONS
+showTablesStatement ::= SHOW tableScope? tablesTarget likeClause?
+showTableDistributedStatement ::= SHOW TABLE DISTRIBUTED nameToken
+showTableTagsStatement ::= SHOW TABLE TAGS FROM showFromTarget
+showTagsStatement ::= SHOW TAGS FROM showFromTarget
+showTopicsStatement ::= SHOW TOPICS
+showTransactionsStatement ::= SHOW TRANSACTIONS
+showTransactionStatement ::= SHOW TRANSACTION identifierOrNumber
+showUsersStatement ::= SHOW USERS
+showDnodeVariablesStatement ::= SHOW DNODE identifierOrNumber VARIABLES likeClause?
+showVgroupsStatement ::= SHOW vgroupsTarget
+showVtablesStatement ::= SHOW tableScope? vtablesTarget likeClause?
+showVnodesStatement ::= SHOW VNODES (ON DNODE identifierOrNumber)?
+
+tableScope ::= NORMAL | CHILD
+aliveTarget ::= nameToken DOT_SIGN ALIVE
+stablesTarget ::= STABLES | nameToken DOT_SIGN STABLES
+streamsTarget ::= STREAMS | nameToken DOT_SIGN STREAMS
+tablesTarget ::= TABLES | nameToken DOT_SIGN TABLES
+vgroupsTarget ::= VGROUPS | nameToken DOT_SIGN VGROUPS
+vtablesTarget ::= VTABLES | nameToken DOT_SIGN VTABLES
+qualifiedName ::= nameToken (DOT_SIGN nameToken)?
+showFromTarget ::= qualifiedName (FROM nameToken)?
+likeClause ::= LIKE STRING_LITERAL
+identifierOrNumber ::= nameToken | numericLiteral
+
+tagValue ::= valueExpression
+valueExpression ::= orExpression
+orExpression ::= andExpression (OR andExpression)*
+andExpression ::= comparisonExpression (AND comparisonExpression)*
+comparisonExpression ::= additiveExpression comparisonPredicate?
+comparisonPredicate ::= comparisonOperator additiveExpression
+                      | likePredicate
+                      | betweenPredicate
+                      | inPredicate
+                      | nullPredicate
+comparisonOperator ::= EQ_SIGN
+                     | GT_SIGN
+                     | LT_SIGN
+                     | GE_SIGN
+                     | LE_SIGN
+                     | NEQ_BANG
+                     | NEQ_ANGLE
+nullPredicate ::= IS NOT? NULL
+likePredicate ::= NOT? LIKE additiveExpression
+betweenPredicate ::= NOT? BETWEEN additiveExpression AND additiveExpression
+inPredicate ::= NOT? IN LPAREN inPredicateValue RPAREN
+inPredicateValue ::= selectQuery
+                   | valueExpression (COMMA_SIGN valueExpression)*
+additiveExpression ::= multiplicativeExpression ((PLUS_SIGN | MINUS_SIGN) multiplicativeExpression)*
+multiplicativeExpression ::= unaryExpression ((ASTERISK | SLASH_SIGN) unaryExpression)*
+unaryExpression ::= primaryExpression
+                | NOT primaryExpression
+                | PLUS_SIGN primaryExpression
+                | MINUS_SIGN primaryExpression
+primaryExpression ::= functionCall
+                    | caseExpression
+                    | scalarSubquery
+                    | currentTimeExpression
+                    | columnReference
+                    | literalValue
+                    | LPAREN valueExpression RPAREN
+caseExpression ::= CASE caseValueExpression? caseWhenClause+ caseElseClause? END
+caseValueExpression ::= valueExpression
+caseWhenClause ::= WHEN valueExpression THEN valueExpression
+caseElseClause ::= ELSE valueExpression
+scalarSubquery ::= LPAREN selectQuery RPAREN
+currentTimeExpression ::= NOW currentTimeCallTail?
+                        | TODAY currentTimeCallTail?
+currentTimeCallTail ::= LPAREN RPAREN
+columnReference ::= nameToken (DOT_SIGN nameToken)*
+nameToken ::= IDENTIFIER
+            | TBNAME
+            | ID
+            | _ROWTS
+            | _IROWTS
+            | _WSTART
+            | _WEND
+            | _WDURATION
+            | _QSTART
+            | _QEND
+            | _QDURATION
+functionCall ::= castFunctionCall
+               | functionName LPAREN functionArgumentList? RPAREN
+castFunctionCall ::= CAST LPAREN valueExpression AS typeName RPAREN
+functionName ::= nameToken
+               | builtinFunctionName
+builtinFunctionName ::= DATABASE
+                      | CLIENT_VERSION
+                      | SERVER_VERSION
+                      | SERVER_STATUS
+                      | NOW
+                      | TODAY
+                      | TIMEZONE
+                      | CURRENT_USER
+                      | USER
+                      | IF
+                      | COUNT
+                      | CAST
+                      | COLS
+                      | COALESCE
+                      | CONCAT
+                      | FIRST
+                      | LAST
+                      | LAST_ROW
+                      | MD5
+                      | PI
+                      | RAND
+                      | SHA
+                      | SHA1
+                      | SHA2
+                      | POSITION
+                      | REPLACE
+                      | SUBSTR
+                      | SUBSTRING
+                      | TRIM
+                      | TO_BASE64
+                      | FROM_BASE64
+                      | AES_ENCRYPT
+                      | AES_DECRYPT
+                      | SM4_ENCRYPT
+                      | SM4_DECRYPT
+functionArgumentList ::= DISTINCT functionArgument (COMMA_SIGN functionArgument)*
+                       | functionArgument (COMMA_SIGN functionArgument)*
+functionArgument ::= ASTERISK | valueExpression
+literalValue ::= durationLiteral
+               | numericLiteral
+               | stringLiteralValue
+               | booleanLiteral
+               | nullLiteral
+               | timestampLiteral
+durationLiteral ::= signedNumericLiteral durationUnit
+signedNumericLiteral ::= numericLiteral
+                       | PLUS_SIGN numericLiteral
+                       | MINUS_SIGN numericLiteral
+durationUnit ::= nameToken
+stringLiteralValue ::= STRING_LITERAL
+                     | STRING_LITERAL_NONE
+                     | STRING_LITERAL_LAST_ROW
+                     | STRING_LITERAL_LAST_VALUE
+                     | STRING_LITERAL_BOTH
+                     | STRING_LITERAL_MS
+                     | STRING_LITERAL_US
+                     | STRING_LITERAL_NS
+                     | STRING_LITERAL_SIMPLE8B
+                     | STRING_LITERAL_BIT_PACKING
+                     | STRING_LITERAL_DELTA_I
+                     | STRING_LITERAL_DELTA_D
+                     | STRING_LITERAL_DISABLED
+                     | STRING_LITERAL_BSS
+                     | STRING_LITERAL_LZ4
+                     | STRING_LITERAL_ZLIB
+                     | STRING_LITERAL_ZSTD
+                     | STRING_LITERAL_TSZ
+                     | STRING_LITERAL_XZ
+                     | STRING_LITERAL_HIGH
+                     | STRING_LITERAL_MEDIUM
+                     | STRING_LITERAL_LOW
+                     | STRING_LITERAL_H
+                     | STRING_LITERAL_M
+                     | STRING_LITERAL_L
+booleanLiteral ::= TRUE | FALSE
+nullLiteral ::= NULL
+timestampLiteral ::= TIMESTAMP stringLiteralValue

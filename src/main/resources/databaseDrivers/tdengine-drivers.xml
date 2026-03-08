@@ -16,7 +16,7 @@
   -->
 
 <drivers>
-  <driver id="tdengine.ws" name="TDengine" dialect="GenericSQL" forced-dbms="TDENGINE" driver-class="com.taosdata.jdbc.ws.WebSocketDriver">
+  <driver id="tdengine.ws" name="TDengine" dialect="TDengineSQL" forced-dbms="TDENGINE" driver-class="com.taosdata.jdbc.ws.WebSocketDriver">
     <url-template name="default" template="jdbc:TAOS-WS://{host::localhost}?[:{port::6041}][/{database:path}?][\?&lt;&amp;,user={user:param},password={password:param},{:identifier}={:param}&gt;]"/>
     <artifact name="TDengine JDBC" use="true" rolling="true"/>
     <option name="auto-sync" value="true"/>

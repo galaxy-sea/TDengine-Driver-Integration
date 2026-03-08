@@ -104,7 +104,7 @@ class TdengineMetadataWrapper(
     private fun buildNormalTablesSql(databaseName: String, tableNamePattern: String?): String {
         return buildString {
             append("SHOW NORMAL ")
-            append(escapeIdentifier(databaseName))
+            append(StringUtils.escapeIdentifier(databaseName))
             append(".TABLES")
             appendLikeClause(tableNamePattern)
         }
@@ -113,7 +113,7 @@ class TdengineMetadataWrapper(
     private fun buildStablesSql(databaseName: String, tableNamePattern: String?): String {
         return buildString {
             append("SHOW ")
-            append(escapeIdentifier(databaseName))
+            append(StringUtils.escapeIdentifier(databaseName))
             append(".STABLES")
             appendLikeClause(tableNamePattern)
         }
@@ -122,7 +122,7 @@ class TdengineMetadataWrapper(
     private fun buildVirtualTablesSql(databaseName: String, tableNamePattern: String?): String {
         return buildString {
             append("SHOW NORMAL ")
-            append(escapeIdentifier(databaseName))
+            append(StringUtils.escapeIdentifier(databaseName))
             append(".VTABLES")
             appendLikeClause(tableNamePattern)
         }
@@ -132,18 +132,10 @@ class TdengineMetadataWrapper(
         return types == null || types.any { it.equals(TABLE_TYPE, ignoreCase = true) }
     }
 
-    private fun escapeIdentifier(value: String): String {
-        return value.replace("`", "``")
-    }
-
-    private fun escapeSqlLiteral(value: String): String {
-        return value.replace("'", "''")
-    }
-
     private fun StringBuilder.appendLikeClause(tableNamePattern: String?) {
         val normalizedPattern = tableNamePattern?.takeUnless { StringUtil.isEmptyOrSpaces(it) } ?: return
         append(" LIKE '")
-        append(escapeSqlLiteral(normalizedPattern))
+        append(StringUtils.escapeSqlLiteral(normalizedPattern))
         append("'")
     }
 

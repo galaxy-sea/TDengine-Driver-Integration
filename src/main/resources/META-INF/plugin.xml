@@ -55,12 +55,23 @@
         <database.driversConfig config="databaseDrivers/tdengine-drivers.xml"/>
         <database.artifactsConfig config="databaseDrivers/tdengine-artifacts.xml"/>
         <database.configValidator implementation="plus.wcj.jetbrains.plugins.tdengine.TdengineConfigValidator"/>
+        <sql.dialect dbms="TDENGINE" implementationClass="plus.wcj.jetbrains.plugins.tdengine.sql.TdengineSqlDialect"/>
+        <lang.parserDefinition language="TDengineSQL" implementationClass="plus.wcj.jetbrains.plugins.tdengine.sql.TdengineParserDefinition"/>
+        <lang.syntaxHighlighterFactory language="TDengineSQL" implementationClass="plus.wcj.jetbrains.plugins.tdengine.sql.TdengineSyntaxHighlighterFactory"/>
+        <lang.commenter language="TDengineSQL" implementationClass="plus.wcj.jetbrains.plugins.tdengine.sql.TdengineCommenter"/>
+        <completion.contributor language="SQL" implementationClass="plus.wcj.jetbrains.plugins.tdengine.sql.TdengineCompletionContributor"/>
+        <codeInsight.parameterInfo language="TDengineSQL" implementationClass="plus.wcj.jetbrains.plugins.tdengine.sql.TdengineFunctionParameterInfoHandler"/>
+        <lang.documentationProvider language="TDengineSQL" implementationClass="plus.wcj.jetbrains.plugins.tdengine.sql.TdengineFunctionDocumentationProvider"/>
     </extensions>
 
     <extensions defaultExtensionNs="com.intellij.database">
         <dbms id="TDENGINE" instance="plus.wcj.jetbrains.plugins.tdengine.TdengineDbms.TDENGINE"/>
+<!--        <jdbcHelper dbms="TDENGINE" implementationClass="plus.wcj.jetbrains.plugins.tdengine.TdengineJdbcHelper"/>-->
         <modelFacade dbms="TDENGINE" implementationClass="plus.wcj.jetbrains.plugins.tdengine.TdengineModelFacade"/>
+        <definitionProvider dbms="TDENGINE" implementationClass="plus.wcj.jetbrains.plugins.tdengine.TdengineDefinitionProvider"/>
         <jdbcMetadataWrapper dbms="TDENGINE" implementationClass="plus.wcj.jetbrains.plugins.tdengine.TdengineMetadataWrapperFactory"/>
         <extensionFallback dbms="TDENGINE" fallbackDbms="UNKNOWN"/>
+        <!--  调试       -->
+        <errorHandler dbms="TDENGINE" implementationClass="com.intellij.database.dialects.generic.GenericDatabaseErrorHandler"/>
     </extensions>
 </idea-plugin>
