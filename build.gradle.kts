@@ -2,7 +2,6 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import org.jetbrains.grammarkit.tasks.GenerateLexerTask
 import org.jetbrains.grammarkit.tasks.GenerateParserTask
-import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
 
 plugins {
     id("java")
@@ -53,6 +52,9 @@ intellijPlatform {
                 <li>Add custom TDengine database icon and branding</li>
             </ul>
         """.trimIndent()
+    }
+    publishing {
+        token = providers.gradleProperty("intellijPlatformPublishingToken")
     }
 }
 
