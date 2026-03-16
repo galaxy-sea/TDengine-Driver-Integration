@@ -7,7 +7,8 @@
 - 方言支持(适配)
   -[x] 关键字提示
   -[x] 函数提示
-  -[] 元数据提：database/table/Field 
+  -[ ] liveTemplates
+  -[ ] 元数据提：database/table/Field 
   - 高亮
     -[x] 关键字高亮
     -[x] 函数高亮

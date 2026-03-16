@@ -1,3 +1,19 @@
+<!--
+  ~ Copyright 2026-present The original author or authors.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~  Unless required by applicable law or agreed to in writing, software
+  ~  distributed under the License is distributed on an "AS IS" BASIS,
+  ~  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  -->
+
 <functions>
     <function name="MY_FUN_TEST" signature="(expr)" description="Return the absolute value."/>
     <function name="ABS" signature="(expr)" description="获得指定字段的绝对值。返回结果类型与原始数据类型一致，适用于数值类型；可用于内层查询和外层查询，适用于表和超级表；只能与普通列、选择函数、投影函数一起使用，不能与聚合函数一起使用。"/>
