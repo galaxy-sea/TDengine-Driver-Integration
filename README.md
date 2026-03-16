@@ -7,7 +7,10 @@
 - 方言支持(适配)
   -[x] 关键字提示
   -[x] 函数提示
-  -[ ] liveTemplates
+  -[x] liveTemplates
+    - tab: 创建 TDengine 超级表
+    - tabs：创建 TDengine 子表
+    - inss：插入数据时自动创建 TDengine 子表
   -[ ] 元数据提：database/table/Field 
   - 高亮
     -[x] 关键字高亮
