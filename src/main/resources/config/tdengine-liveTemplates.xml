@@ -18,14 +18,9 @@
 <templateSet group="TDengine">
     <template
         name="tab"
-        value="
-CREATE STABLE $STABLE_NAME$ (&#10;
-    $TIMESTAMP_COLUMN$ timestamp &#10;
-) TAGS (&#10;
-    $TAG_NAME$ BIGINT UNSIGNED&#10;
-)$END$;"
+        value="CREATE STABLE $STABLE_NAME$ (&#10;    $TIMESTAMP_COLUMN$ timestamp &#10;) TAGS (&#10;    $TAG_NAME$ BIGINT UNSIGNED&#10;)$END$;"
         description="创建 TDengine 超级表"
-        toReformat="true">
+        toReformat="false">
         <variable name="STABLE_NAME" expression="" defaultValue="&quot;new_table&quot;" alwaysStopAt="true"/>
         <variable name="TIMESTAMP_COLUMN" expression="" defaultValue="&quot;ts&quot;" alwaysStopAt="true"/>
         <variable name="TAG_NAME" expression="" defaultValue="&quot;tag_name&quot;" alwaysStopAt="true"/>
@@ -35,15 +30,9 @@ CREATE STABLE $STABLE_NAME$ (&#10;
     </template>
     <template
         name="tabs"
-        value="
-CREATE TABLE $STABLE_NAME$_$TABLE_ID$ &#10;
-USING $STABLE_NAME$ (&#10;
-    $TAG_NAME$&#10;
-) TAGS (&#10;
-    $TAG_VALUE$&#10;
-)$END$;"
+        value="CREATE TABLE $STABLE_NAME$_$TABLE_ID$ &#10;USING $STABLE_NAME$ (&#10;    $TAG_NAME$&#10;) TAGS (&#10;    $TAG_VALUE$&#10;)$END$;"
         description="创建 TDengine 子表"
-        toReformat="true">
+        toReformat="false">
         <variable name="STABLE_NAME" expression="" defaultValue="&quot;new_table&quot;" alwaysStopAt="true"/>
         <variable name="TABLE_ID" expression="" defaultValue="&quot;stable_id&quot;" alwaysStopAt="true"/>
         <variable name="TAG_NAME" expression="" defaultValue="&quot;tag_name&quot;" alwaysStopAt="true"/>
@@ -54,18 +43,11 @@ USING $STABLE_NAME$ (&#10;
     </template>
     <template
         name="inss"
-        value="
-INSERT INTO $SUBTABLE_NAME$ &#10;
-USING $STABLE_NAME$ &#10;
-TAGS ( &#10;
-    $TAG_VALUES$ &#10;
-) VALUES ( &#10;
-    $ROW_VALUES$ &#10;
-)$END$;"
+        value="INSERT INTO $STABLE_NAME$_$TABLE_ID$ &#10;USING $STABLE_NAME$ &#10;TAGS ( &#10;    $TAG_VALUES$ &#10;) VALUES ( &#10;    $ROW_VALUES$ &#10;)$END$;"
         description="插入数据时自动创建 TDengine 子表"
-        toReformat="true">
-        <variable name="SUBTABLE_NAME" expression="" defaultValue="&quot;subtable_name&quot;" alwaysStopAt="true"/>
-        <variable name="STABLE_NAME" expression="" defaultValue="&quot;stable_name&quot;" alwaysStopAt="true"/>
+        toReformat="false">
+        <variable name="STABLE_NAME" expression="" defaultValue="&quot;new_table&quot;" alwaysStopAt="true"/>
+        <variable name="TABLE_ID" expression="" defaultValue="&quot;stable_id&quot;" alwaysStopAt="true"/>
         <variable name="TAG_VALUES" expression="" defaultValue="&quot;tag_values&quot;" alwaysStopAt="true"/>
         <variable name="ROW_VALUES" expression="" defaultValue="&quot;row_values&quot;" alwaysStopAt="true"/>
         <context>
