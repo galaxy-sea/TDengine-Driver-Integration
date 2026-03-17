@@ -30,6 +30,7 @@ dependencies {
         // Build against IntelliJ IDEA Ultimate 2024.3 (contains Database plugin) to target IDEA/DataGrip 2024.3+.
         // intellijIdeaUltimate("2025.2.4")
         datagrip("2025.2.4")
+        // datagrip("2024.3")
         bundledPlugin("com.intellij.database")
         testFramework(org.jetbrains.intellij.platform.gradle.TestFrameworkType.Platform)
     }
