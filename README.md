@@ -5,17 +5,18 @@
 - tables只展示 `超级表`，`虚拟表`，`普通表`。不显示 `子表`（没啥意义）
 - `视图`还在适配中（`没有企业版无法验证,谁施舍一下吧`）
 - 方言支持(适配)
-  -[x] 关键字提示
-  -[x] 函数提示
-  -[x] liveTemplates
+  - [x] 关键字提示
+  - [x] 函数提示
+  - [x] liveTemplates
     - tab: 创建 TDengine 超级表
     - tabs：创建 TDengine 子表
     - inss：插入数据时自动创建 TDengine 子表
-  -[ ] 元数据提：database/table/Field 
+  - [ ] 元数据提：database/table/Field 
   - 高亮
-    -[x] 关键字高亮
-    -[x] 函数高亮
-    -[ ] 元数据高亮
+    - [x] 关键字高亮
+    - [x] 函数高亮
+    - [ ] 元数据高亮
+- 面板数据（看看就好了，没打算做的啦） 
 
 
 ## 支持版本
