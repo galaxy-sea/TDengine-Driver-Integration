@@ -43,16 +43,6 @@ intellijPlatform {
             untilBuild = provider { null }
         }
 
-        changeNotes = """
-            <h3>1.0.0</h3>
-            <ul>
-                <li>Add TDengine data source integration for JetBrains database tools</li>
-                <li>Add built-in TDengine JDBC artifact definitions and download support</li>
-                <li>Add TDengine connection configuration validation</li>
-                <li>Add TDengine metadata wrapper for table introspection</li>
-                <li>Add custom TDengine database icon and branding</li>
-            </ul>
-        """.trimIndent()
     }
     publishing {
         token = providers.gradleProperty("intellijPlatformPublishingToken")

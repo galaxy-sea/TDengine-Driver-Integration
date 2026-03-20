@@ -29,9 +29,9 @@
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
     <description><![CDATA[
-        <p>TDengine Driver Integration adds first-class TDengine data source setup to JetBrains database tools.</p>
+        <p>TDengine Driver Integration adds first-class TDengine (TAOS) data source setup to JetBrains database tools.</p>
 
-        <p>It provides a ready-to-use TDengine driver template for DataGrip and IntelliJ IDEA Ultimate 2024.3+, with built-in JDBC artifact download and connection validation.</p>
+        <p>It provides a ready-to-use TDengine / TAOS driver template for DataGrip and IntelliJ IDEA Ultimate 2024.3+, with built-in JDBC artifact download and connection validation.</p>
 
         <ul>
             <li>TDengine data source entry in the <b>Data Sources and Drivers</b> dialog</li>
@@ -41,7 +41,9 @@
             <li>Custom metadata wrapper for TDengine table introspection</li>
         </ul>
 
-        <p>The plugin is intended for TDengine users who want a simpler setup experience inside JetBrains database IDEs.</p>
+        <p>The plugin is intended for TDengine and TAOS users who want a simpler setup experience inside JetBrains database IDEs.</p>
+
+        <p>Keywords: TDengine TAOS TAOSData JDBC SQL TSDB WebSocket database </p>
     ]]></description>
 
     <!-- Product and plugin compatibility requirements.
