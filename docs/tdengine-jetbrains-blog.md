@@ -70,7 +70,12 @@ JetBrains 的 SQL 能力很多都建立在 PSI 结构之上。语法树设计得
 
 在连接层面，插件提供了 TDengine 数据源入口、内置 JDBC 版本列表、连接参数模板和配置校验。也就是说，用户在 JetBrains IDEs 里添加 TDengine 数据源时，不需要再从零开始拼接配置，整体路径会更接近 JetBrains 已支持数据库的使用方式。
 
+![1newjdbc.png](img/1newjdbc.png)
+
 在 SQL 开发层面，目前已经完成了 TDengine 方言的基础适配，包括：
+
+![2create.png](img/2create.png)
+![3new.png](img/3new.png)
 
 - TDengine 数据源接入
 - JDBC 驱动版本选择与下载
@@ -82,6 +87,9 @@ JetBrains 的 SQL 能力很多都建立在 PSI 结构之上。语法树设计得
 - 函数参数提示
 - 函数悬停文档
 - Live Templates
+
+![4lt.png](img/4lt.png)
+
 
 对我来说，这里面最重要的不是某一个单独功能，而是整体交互逻辑终于开始“像一门被 JetBrains IDEs 认真支持的数据库”了。
 
