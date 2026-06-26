@@ -22,6 +22,8 @@ repositories {
     }
 }
 
+apply(from = "tdengine-jdbc-artifacts.gradle.kts")
+
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin.html
 dependencies {
     testImplementation(kotlin("test"))
