@@ -27,6 +27,7 @@ apply(from = "tdengine-jdbc-artifacts.gradle.kts")
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin.html
 dependencies {
     testImplementation(kotlin("test"))
+    testRuntimeOnly("junit:junit:4.13.2")
 
     intellijPlatform {
         // Build against IntelliJ IDEA Ultimate 2024.3 (contains Database plugin) to target IDEA/DataGrip 2024.3+.
