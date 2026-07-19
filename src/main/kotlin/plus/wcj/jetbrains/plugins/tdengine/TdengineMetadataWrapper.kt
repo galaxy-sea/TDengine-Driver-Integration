@@ -30,6 +30,8 @@ class TdengineMetadataWrapper(
     data: RemoteDatabaseMetaData
 ) : GenericMetadataWrapper(connection, data) {
 
+    private val databaseProductVersion = runCatching { data.databaseProductVersion }.getOrNull()
+
     override fun tablesInner(
         schema: DatabaseMetaDataWrapper.Schema,
         tableNamePattern: String?,
@@ -65,21 +67,13 @@ class TdengineMetadataWrapper(
 
         return try {
             val tableNames = LinkedHashSet<String>()
-            tableNames += readTableNames(
-                JdbcNativeUtil.computeRemote {
-                    statement.executeQuery(buildNormalTablesSql(databaseName, tableNamePattern))
-                } ?: return emptyList()
-            )
-            tableNames += readTableNames(
-                JdbcNativeUtil.computeRemote {
-                    statement.executeQuery(buildVirtualTablesSql(databaseName, tableNamePattern))
-                } ?: return emptyList()
-            )
-            tableNames += readTableNames(
-                JdbcNativeUtil.computeRemote {
-                    statement.executeQuery(buildStablesSql(databaseName, tableNamePattern))
-                } ?: return emptyList()
-            )
+            for (query in TdengineMetadataQueries.build(databaseProductVersion, databaseName, tableNamePattern)) {
+                tableNames += readTableNames(
+                    JdbcNativeUtil.computeRemote {
+                        statement.executeQuery(query)
+                    } ?: return emptyList()
+                )
+            }
             tableNames.toList()
         } finally {
             JdbcNativeUtil.closeRemoteStatementSafe(statement)
@@ -99,6 +93,33 @@ class TdengineMetadataWrapper(
         } finally {
             JdbcNativeUtil.performSafe { resultSet.close() }
         }
+    }
+
+    private fun includesTables(types: Array<String>?): Boolean {
+        return types == null || types.any { it.equals(TABLE_TYPE, ignoreCase = true) }
+    }
+
+    private val connectionCore: DatabaseConnectionCore
+        get() = getConnection()
+
+    companion object {
+        private const val TABLE_TYPE = "TABLE"
+    }
+}
+
+internal object TdengineMetadataQueries {
+
+    fun build(productVersion: String?, databaseName: String, tableNamePattern: String?): List<String> = buildList {
+        add(buildNormalTablesSql(databaseName, tableNamePattern))
+        if (supportsVirtualTables(productVersion)) {
+            add(buildVirtualTablesSql(databaseName, tableNamePattern))
+        }
+        add(buildStablesSql(databaseName, tableNamePattern))
+    }
+
+    private fun supportsVirtualTables(productVersion: String?): Boolean {
+        val version = TdengineVersion.parse(productVersion) ?: return false
+        return version >= MIN_VIRTUAL_TABLE_VERSION
     }
 
     private fun buildNormalTablesSql(databaseName: String, tableNamePattern: String?): String {
@@ -128,10 +149,6 @@ class TdengineMetadataWrapper(
         }
     }
 
-    private fun includesTables(types: Array<String>?): Boolean {
-        return types == null || types.any { it.equals(TABLE_TYPE, ignoreCase = true) }
-    }
-
     private fun StringBuilder.appendLikeClause(tableNamePattern: String?) {
         val normalizedPattern = tableNamePattern?.takeUnless { StringUtil.isEmptyOrSpaces(it) } ?: return
         append(" LIKE '")
@@ -139,12 +156,40 @@ class TdengineMetadataWrapper(
         append("'")
     }
 
-    private val connectionCore: DatabaseConnectionCore
-        get() = getConnection()
+    private data class TdengineVersion(
+        val major: Int,
+        val minor: Int,
+        val patch: Int,
+        val build: Int
+    ) : Comparable<TdengineVersion> {
 
-    companion object {
-        private const val TABLE_TYPE = "TABLE"
+        override fun compareTo(other: TdengineVersion): Int {
+            return compareValuesBy(
+                this,
+                other,
+                TdengineVersion::major,
+                TdengineVersion::minor,
+                TdengineVersion::patch,
+                TdengineVersion::build
+            )
+        }
+
+        companion object {
+            private val VERSION_REGEX = Regex("""\d+(?:\.\d+){1,3}""")
+
+            fun parse(value: String?): TdengineVersion? {
+                val versionText = value?.let(VERSION_REGEX::find)?.value ?: return null
+                val parts = versionText.split('.').map { it.toIntOrNull() ?: return null }.toMutableList()
+                while (parts.size < 4) {
+                    parts += 0
+                }
+                return TdengineVersion(parts[0], parts[1], parts[2], parts[3])
+            }
+        }
     }
+
+    // Virtual tables were introduced in TDengine 3.3.6.0.
+    private val MIN_VIRTUAL_TABLE_VERSION = TdengineVersion(3, 3, 6, 0)
 }
 
 class TdengineMetadataWrapperFactory : DatabaseMetaDataWrapper.MDFactory() {
